@@ -37,6 +37,7 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 
 Route::resource('/photo', 'PhotoController');
   Route::get('/manage', 'AdminController@index');
+  Route::post('/custom', 'CustomLoginController@authenticate');
    Route::get('/manageparttime', 'AdminController@partTime');
   Route::get('/profile/{id}', 'AdminController@profile_teacher');
   Route::get('/add', 'AdminController@add_new');

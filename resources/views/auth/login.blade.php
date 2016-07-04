@@ -152,7 +152,7 @@ $(function() {
                               
                                  setTimeout(function () { $("#loading-top span").text("Yes, you are now loggin in...") }, 500);
                                  setTimeout(function () { $("#loading-top span").text("Redirecting to your page...")  }, 1500);
-                                 setTimeout( "window.location.href='/check'", 3100 );
+                                 setTimeout( "window.location.href='"+data.redirect+"'", 3100 );
                         },
                            error: function (data) {
                             var errors = $.parseJSON(data.responseText);
